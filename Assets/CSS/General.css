@@ -1,0 +1,398 @@
+body{
+    background-color: black;
+    background-image:url(../Images/Brick_Wall.jpg);
+}
+.background-tint {
+    background-color: rgba(0, 0, 0, 0.651);
+    background-blend-mode: multiply;
+  }
+
+h1.Title{
+
+color: white;
+font-size: 100px;
+font-family: 'Cairo', sans-serif;
+line-height: 110%;
+text-transform: uppercase;
+margin: 0px;
+padding: 0;
+text-align: left;
+}
+
+h1.Text{
+color: white;
+font-size: 70px;
+font-family: 'Cairo', sans-serif;
+line-height: 110%;
+text-transform: uppercase;
+margin: 30px;
+padding: 0;
+text-align: right;
+}
+.Title{
+color: white;
+font-size: 40px;
+font-family: 'Cairo', sans-serif;
+line-height: 110%;
+text-transform: uppercase;
+margin: 30px;
+padding: 0;
+text-align: center;
+}
+.Text{
+color: white;
+font-size: 30px;
+font-family: 'Cairo', sans-serif;
+line-height: 110%;
+text-transform: uppercase;
+margin: 30px;
+padding: 0;
+text-align: center;
+}
+
+.tl{
+  color: white;
+  font-size: 40px;
+  font-family: 'Cairo', sans-serif;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+  }
+  .tm{
+    color: white;
+    font-size: 30px;
+    font-family: 'Cairo', sans-serif;
+    line-height: 110%;
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+    }
+    .ts{
+      color: white;
+      font-size: 20px;
+      font-family: 'Cairo', sans-serif;
+      line-height: 110%;
+      text-transform: uppercase;
+      margin: 10px;
+      padding: 0;
+      text-align: center;
+      }
+
+.div1{
+width:200px;
+background:rgba(0, 0, 0, 0);
+height:200px;
+display:inline-block
+}
+
+.logo{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin: 30px;
+  }
+.Zoom {
+    transition:transform 0.25s ease;
+    position: relative;
+
+}
+
+.Zoom:hover {
+    -webkit-transform:scale(1.5); /* or some other value */
+    transform: translateZ(1);
+    transform:scale(1.5);
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+/*---------------------------- Nav Bar */
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    top: 0;
+    width: 100%;
+    font-family: 'Cairo', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: rgba(0, 217, 255, 0.411);
+  }
+  .active {
+    background-color: #00a2ff;
+  }
+
+  /*-------------------------------- Scroll Wheel */
+
+  /* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px ; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 217, 255); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #006eff; 
+  }
+
+  /*--------------------------------- Cards */
+
+  * {
+    box-sizing: border-box;
+    
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+    
+  }
+  
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 90%;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+      
+    box-shadow: 
+    0 0 2px #fff,
+    0 0 1px #fff,
+    0 0 5px #fff,
+    0 0 20px rgb(0, 238, 255),
+    0 0 40px rgb(0, 204, 255),
+    0 0 45px rgb(0, 255, 242),
+    0 0 50px rgb(0, 255, 242),
+    0 0 75px rgb(0, 38, 255);
+
+    
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(4, 135, 158, 0.603);
+    color: white;
+  }
+  
+
+
+  /*-----------------------------------------------neon flicker*/
+
+  .neonText {
+    color: #fff;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 1px #fff,
+        0 0 10px #fff,
+        0 0 42px rgb(0, 238, 255),
+        0 0 82px rgb(0, 204, 255),
+        0 0 92px rgb(0, 255, 242),
+        0 0 102px rgb(0, 255, 242),
+        0 0 151px rgb(0, 38, 255);
+  }
+
+  h1.flicker{
+
+  animation: flicker 1.5s infinite alternate; 
+  }
+  @keyframes flicker {
+    
+    100% {
+  
+        text-shadow:
+        0 0 1px #fff,
+        0 0 2px #fff,
+        0 0 10px #fff,
+        0 0 42px rgb(0, 238, 255),
+        0 0 82px rgb(0, 204, 255),
+        0 0 92px rgb(0, 255, 242),
+        0 0 102px rgb(0, 255, 242),
+        0 0 151px rgb(0, 38, 255);
+    
+    }
+    
+    0% {        
+        text-shadow:
+        0 0 1px #fff,
+        0 0 2px #fff,
+        0 0 6px #fff,
+        0 0 10px rgb(0, 238, 255),
+        0 0 45px rgb(0, 204, 255),
+        0 0 55px rgb(0, 255, 242),
+        0 0 70px rgb(0, 255, 242),
+        0 0 80px rgb(0, 38, 255);
+    }    
+  }
+
+  .container {
+    margin-top: 20vh;
+  }
+  
+  /*------------------------------------------image tiles*/
+
+  .ImgRow {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .ImgColumn {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .ImgColumn img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .ImgColumn {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .ImgColumn {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+
+  /*----------------------------------Overlay*/
+
+  .Overlaycontainer {
+    position: relative;
+    width: 100%;
+  }
+  
+  .Overlayimage {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .Overlaymiddle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+  
+  .Overlaycontainer:hover .Overlaymiddle {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .Overlaytext {
+    background-color: #00000086;
+    color: white;
+    font-size: 32px;
+    padding: 16px 100pX;
+  }
+  
+  /*--------------------------------------- Flip Card */
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin-bottom: 100px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: rgb(255, 255, 255)(187, 187, 187, 0);
+    color: black;
+    height: auto;
+  }
+  
+  .flip-card-back {
+    background-color: rgba(4, 135, 158, 0.603);
+    color: white;
+    transform: rotateY(180deg);
+  }
